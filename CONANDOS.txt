@@ -1,0 +1,129 @@
+
+mkdir : Para crear directorios.
+
+touch : Para crear los ficheros archivos.
+
+git init : Todo lo que se escriba dentro de la carpeta va a estar dentro del .git
+
+git add : Lleva el control de los archivos que se agregan luego de escribir ese comando.
+
+2.1 git add . : Es para todo agregar pero no es recomendable.
+
+git commit : Comando que indica que esta lista alguna funcionalidad para que sea una versión del código.
+
+ git commit — m “Mi primer commit”
+
+Push
+Básicamente lo que realiza un push es publicar lo que se encuentra en nuestro servidor local y llevarlo al servidor remoto de Github
+
+Pull
+El pull trae los cambios de nuestro repositorio remoto y los actualiza al repositorio local.
+git remote add origin [URL DEL REPOSITORIO EN GITHUB]
+
+6. git push origin master : Es el nombre que se le pone al repositorio remoto al que se conecta.
+
+
+$ ayuda git
+uso: git [--version] [--help] [-C <path>] [-c <name> = <value>]
+           [--exec-path [= <path>]] [--html-path] [--man-path] [--info-camino]
+           [-p | --paginar | -P | --no-pager] [--no-replace objects][--desnudo]
+           [--git-dir = <path>] [--work-tree = <path>] [--namespace = <name>]
+           <comando> [<args>]
+
+Estos son comandos Git comunes que se usan en diversas situaciones:
+
+iniciar un área de trabajo (ver también: tutorial de ayuda de git)
+   clone      Clonar un repositorio en un nuevo directorio
+   init       Cree un repositorio Git vacío o reinicialice uno existente
+
+trabajar en el cambio actual (ver también: ayuda de git todos los días)
+
+   add         Agregar contenido del archivo al índice
+   mv          Mover o renombrar un archivo, un directorio o un enlace simbólico
+
+   restore     Restaurar archivos del árbol de trabajo
+   rm          Eliminar archivos del árbol de trabajo y del índice
+
+sparse-checkout   Inicializa y modifica el sparse-checkout
+
+examinar la historia y el estado (ver también: revisiones de ayuda de git)
+
+   bisect      Utilice la búsqueda binaria para encontrar el compromiso que                       introduce un error
+   diff        Muestra los cambios entre commits, commit y working árbol, etc.
+   grep        Imprimir líneas que coinciden con un patrón
+   log         Mostrar registros de confirmación
+   show        Mostrar varios tipos de objetos
+   status      Muestra el estado del árbol de trabajo
+
+crece, marca y modifica tu historia común
+
+   branch     Lista de sucursales, crea o elimina sucursales
+   commit     Registrar cambios en el repositorio
+   merge      Unir dos o más historias de desarrollo juntas
+   rebase     Vuelva a aplicar los commits sobre otra punta base
+   reset      Restablece HEAD actual al estado especificado
+   switch     Cambiar ramas
+   tag        Reaccionar, enumerar, eliminar o verificar un objeto de etiqueta                    firmado con GPG
+
+colaborar (ver también: flujos de trabajo de ayuda de git)
+
+   fetch     Descargar objetos y referencias de otro repositorio
+   pull      Fetch e integrarlo con otro repositorio o una sucursal local
+   push       Actualizar referencias remotas junto con objetos asociados
+
+
+'git help -a' y 'git help -g' enumeran los subcomandos disponibles y algunos
+Guías conceptuales. Consulte 'git help <comando>' o 'git help <concepto>'
+leer sobre un subcomando o concepto específico.
+Consulte 'git help git' para obtener una descripción general del sistema.
+
+
+
+GIT Comandos básicos
+
+
+Para las personas que se están iniciando en GIT, les presento una serie de comandos usados comúnmente.
+
+
+git help
+Muestra una lista con los comandos más utilizados en GIT.
+
+git init
+Podemos ejecutar ese comando para crear localmente un repositorio con GIT y así utilizar todo el funcionamiento que GIT ofrece.  Basta con estar ubicados dentro de la carpeta donde tenemos nuestro proyecto y ejecutar el comando.  Cuando agreguemos archivos y un commit, se va a crear el branch master por defecto.
+
+git add + path
+Agrega al repositorio los archivos que indiquemos.
+
+git add -A
+Agrega al repositorio TODOS los archivos y carpetas que estén en nuestro proyecto, los cuales GIT no está siguiendo.
+
+git commit -m "mensaje" + archivos
+Hace commit a los archivos que indiquemos, de esta manera quedan guardados nuestras modificaciones.
+
+git commit -am "mensaje"
+Hace commit de los archivos que han sido modificados y GIT los está siguiendo.
+
+git checkout -b NombreDeBranch
+Crea un nuevo branch y automaticamente GIT se cambia al branch creado, clonando el branch desde donde ejecutamos el comando.
+
+git branch
+Nos muestra una lista de los branches que existen en nuestro repositorio.
+
+git checkout NombreDeBranch
+Sirve para moverse entre branches, en este caso vamos al branch que indicamos en el comando.
+
+
+git merge NombreDeBranch
+Hace un merge entre dos branches, en este caso la dirección del merge sería entre el branch que indiquemos en el comando, y el branch donde estémos ubicados.
+
+git status
+Nos indica el estado del repositorio, por ejemplo cuales están modificados, cuales no están siendo seguidos por GIT, entre otras características.
+
+git clone URL/name.git NombreProyecto
+Clona un proyecto de git en la carpeta NombreProyecto.
+
+git push origin NombreDeBranch
+Luego de que hicimos un git commit, si estamos trabajando remotamente, este comando va a subir los archivos al repositorio remoto, específicamente al branch que indiquemos.
+
+git pull origin NombreDeBranch
+Hace una actualización en nuestro branch local, desde un branch remoto que indicamos en el comando.
